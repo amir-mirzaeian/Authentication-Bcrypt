@@ -1,8 +1,8 @@
 # Authentication-DatabseEncryption
-using hashing to secure the password
+using bcrypt to secure the password
 
 ## Description:
-A very simple login/registration page with hashing the password by the help of 'md5' npm package.
+A very simple login/registration page with hashing the password by the help of 'bcrypt' npm package.
 
 ## Technology used in the project
 Database: Mongodb  
@@ -14,8 +14,8 @@ require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const mongoose = require("mongoose");
-const md5 = require('md5');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 const app = express();
 
